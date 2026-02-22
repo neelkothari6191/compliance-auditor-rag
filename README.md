@@ -1,26 +1,41 @@
+# 🏦 Real-Time Transaction Compliance Auditor (RAG System)
 
-# ComplianceRAG
+An AI decision-support system that evaluates financial transaction scenarios against a compliance manual using Retrieval-Augmented Generation (RAG).
 
-A Retrieval-Augmented Generation (RAG) system designed to streamline compliance workflows through intelligent document processing and querying.
+Instead of searching policies manually, users describe a situation in natural language and receive a compliance assessment grounded in official rules.
 
-## Features
+---
 
-- **Document Ingestion**: Load and process compliance documents
-- **Semantic Search**: Retrieve relevant compliance information using RAG
-- **Query Interface**: Ask questions about compliance requirements
-- **Context-Aware Responses**: Generate accurate answers based on document context
+## ✨ Key Features
 
-## Getting Started
+- 📄 Policy-aware responses from a compliance manual (PDF)
+- 🔍 Semantic search over Q&A-style regulations
+- ⚖️ Compliance reasoning for real transaction scenarios
+- 🧠 Local LLM support (Ollama) — no API cost required
+- 📊 Returns similarity score + answer source (policy vs general)
+- 🌐 Full-stack web app (React + FastAPI)
 
-1. Clone the repository
-2. Install dependencies: `pip install -r requirements.txt`
-3. Configure your document sources
-4. Run the application
+---
 
-## Tech Stack
+## 🧩 Use Case
 
-- Python
-- LLM-based retrieval and generation
-- Vector embeddings for semantic search (pinecone)
+Designed for roles such as:
 
+- Bank customer service agents  
+- Junior brokers  
+- Compliance officers  
+- AML/KYC analysts  
 
+Example query:
+
+> “Client wants to transfer $50,000 to the Cayman Islands for a real estate purchase.”
+
+The system retrieves relevant rules and evaluates compliance risk.
+
+---
+
+## 📥 Input & 📤 Output
+
+### Input
+
+Natural-language transaction scenario:
