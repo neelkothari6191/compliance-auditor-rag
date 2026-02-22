@@ -1,194 +1,65 @@
-🏦 Real-Time Transaction Compliance Auditor (RAG System)
+# Compliance Auditor RAG
 
-An AI decision-support system that evaluates financial transaction scenarios against a compliance manual using Retrieval-Augmented Generation (RAG).
+## 📖 Overview
+The Compliance Auditor RAG is a tool designed to assist organizations in ensuring compliance with regulatory standards. This document provides a comprehensive guide to understanding, setting up, and contributing to the project.
 
-Instead of searching policies manually, users describe a situation in natural language and receive a compliance assessment grounded in official rules.
+## 🚀 Tech Stack
+| Technology      | Version    |
+|-----------------|------------|
+| Node.js         | 14.x       |
+| Express         | 4.x        |
+| MongoDB         | 4.x        |
+| React           | 17.x       |
 
-✨ Key Features
+## 🛠️ Setup Instructions
+### Prerequisites
+- Node.js 14.x
+- npm (Node Package Manager)
+- MongoDB
 
-📄 Policy-aware responses from a compliance manual (PDF)
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/neelkothari6191/compliance-auditor-rag.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd compliance-auditor-rag
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-🔍 Semantic search over Q&A-style regulations
+### Environment Variables Template
+Create a `.env` file in the root directory and add the following variables:
+```
+DB_URI=your_mongo_database_uri
+PORT=3000
+SECRET_KEY=your_secret_key
+```
 
-⚖️ Compliance reasoning for real transaction scenarios
+## 🧪 Testing
+To run the tests, use the following command:
+```bash
+npm test
+```
 
-🧠 Local LLM support (Ollama) — no API cost required
+## 🚧 Roadmap
+- **Q1 2026**: Implement advanced reporting features.
+- **Q2 2026**: Expand compliance frameworks supported.
 
-📊 Returns similarity score + answer source (policy vs general)
+## 🤝 Contributing
+We welcome contributions! Please follow these steps:
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Commit your changes (`git commit -m 'Add new feature'`).
+4. Push to the branch (`git push origin feature-branch`).
+5. Open a pull request.
 
-🌐 Full-stack web app (React + FastAPI)
+---
 
-🧩 Use Case
+## 📅 Current Status
+Last updated on: 2026-02-22 23:11:35 UTC
 
-Designed for roles such as:
-
-Bank customer service agents
-
-Junior brokers
-
-Compliance officers
-
-AML/KYC analysts
-
-Example query:
-
-“Client wants to transfer $50,000 to the Cayman Islands for a real estate purchase.”
-
-The system retrieves relevant rules and evaluates compliance risk.
-
-📥 Input & 📤 Output
-Input
-
-Natural-language transaction scenario:
-
-Client wants to transfer $50,000 to Cayman Islands.
-Customer has 2 years of account history.
-Output
-
-Structured response:
-
-{
-  "source": "policy",
-  "similarity": 0.63,
-  "answer": "FLAGGED. Transfers to high-risk jurisdictions require enhanced due diligence."
-}
-
-If no policy is relevant:
-
-{
-  "source": "general",
-  "answer": "General guidance..."
-}
-🏗️ High-Level Architecture
-User (Browser)
-      ↓
-React Frontend
-      ↓ HTTP
-FastAPI Backend
-      ↓
-RAG Pipeline
-      ↓
-Vector Database (Pinecone)
-      ↓
-Local LLM (Ollama)
-      ↓
-Response
-🔄 RAG Pipeline Flow
-1) Ingestion (One-Time)
-PDF Compliance Manual
-        ↓
-Text Extraction
-        ↓
-Q&A Chunking
-        ↓
-Embeddings (HuggingFace)
-        ↓
-Pinecone Vector Index
-2) Query Time
-User Scenario
-      ↓
-Embedding
-      ↓
-Vector Search
-      ↓
-Relevant Policies Retrieved
-      ↓
-LLM Reasoning (Ollama)
-      ↓
-Compliance Assessment
-🧠 Tech Stack
-Frontend
-
-React
-
-Fetch API
-
-Backend
-
-FastAPI
-
-LangChain (RAG orchestration)
-
-AI Components
-
-LLM: Ollama (Llama 3 / Mistral)
-
-Embeddings: Sentence Transformers (MiniLM)
-
-Vector DB: Pinecone
-
-Data Processing
-
-PyPDFLoader (LangChain)
-
-📂 Project Structure
-compliance-auditor/
-│
-├── backend/
-│   ├── app/
-│   │   ├── main.py          # FastAPI entry point
-│   │   ├── ingest.py        # PDF → vector DB
-│   │   ├── rag_pipeline.py  # Retrieval + reasoning
-│   │   ├── config.py        # Settings
-│   │   └── models.py        # API schemas
-│   └── data/                # Compliance manual
-│
-├── frontend/
-│   └── src/
-│       ├── App.js           # UI
-│       └── api.js           # Backend calls
-│
-└── docker-compose.yml
-🚀 How to Run Locally
-1️⃣ Start Ollama
-ollama pull llama3
-2️⃣ Start Backend
-cd backend
-source venv/bin/activate
-uvicorn app.main:app --reload
-
-Backend runs at:
-
-http://localhost:8000
-3️⃣ Ingest Compliance Manual (one-time)
-
-Open:
-
-http://localhost:8000/docs
-
-Run:
-
-POST /ingest
-4️⃣ Start Frontend
-cd frontend
-npm install
-npm start
-
-Frontend runs at:
-
-http://localhost:3000
-🧪 Example Scenario to Test
-Client wants to transfer $50,000 to Cayman Islands.
-🏆 Why This Project Matters
-
-This architecture mirrors real systems used in:
-
-Financial compliance automation
-
-RegTech platforms
-
-Legal document intelligence
-
-Enterprise knowledge assistants
-
-📌 Future Improvements
-
-Risk scoring (Approved / Flagged)
-
-Policy citations with page numbers
-
-Multi-document support
-
-Conversation memory
-
-Cloud deployment
+For more information, check the [issues](https://github.com/neelkothari6191/compliance-auditor-rag/issues) or reach out to the community.
