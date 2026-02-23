@@ -232,34 +232,6 @@ Client wants to transfer $50,000 to Cayman Islands.
 
 ---
 
-## 🏆 Why This Project Matters
-
-This architecture mirrors real systems used in:
-
-- Financial compliance automation  
-- RegTech platforms  
-- Legal document intelligence  
-- Enterprise knowledge assistants  
-
----
-
-## 📌 Future Improvements
-
-- Risk scoring (Approved / Flagged)
-- Policy citations with page numbers
-- Multi-document support
-- Conversation memory
-- Cloud deployment
-
----
-
-## 📄 License
-
-MIT (or your preferred license)
-
----
-
 ## 👤 Author
 
-Your Name  
 GitHub: https://github.com/neelkothari6191
